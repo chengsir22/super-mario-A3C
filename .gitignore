@@ -10,8 +10,11 @@
 *.sim/
 *.xpr
 
-output/
-!output/video_4_1.mp4
+/output/*
+!/output/video_4_1.mp4
 
+
+/trained_models/*
+!/trained_models/a3c_super_mario_bros_4_1
 
 
