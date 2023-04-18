@@ -1,0 +1,12 @@
+# mac
+._*
+.DS_Store
+
+# vivado_prj
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.xpr
+
