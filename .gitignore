@@ -10,5 +10,8 @@
 *.sim/
 *.xpr
 
+output/
+!output/video_4_1.mp4
+
 
 
