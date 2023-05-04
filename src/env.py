@@ -74,7 +74,7 @@ class CustomSkipFrame(Wrapper):
         for i in range(self.skip):
             if not done:
                 state, reward, done, info = self.env.step(action)
-                total_reward += reward··
+                total_reward += reward
                 states.append(state)
             else:
                 states.append(state)
