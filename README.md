@@ -1,4 +1,8 @@
-## 创建环境
+## 超级马利奥闯关A3C
+使用A3C算法训练AI通关马里奥小游戏。
+
+### 使用流程如下
+
 conda新建虚拟环境，安装库 `pip install -r requirements.txt`
 
 版本要和 requirements.txt 中一致（pytorch 1.11.0，gym 0.21.0）
