@@ -61,8 +61,8 @@ def train(opt):
 
     optimizer = GlobalAdam(global_model.parameters(), lr=opt.lr)
     
-    local_train(0, opt, global_model, optimizer, True)
-    local_test(opt.num_processes, opt, global_model)
+    local_train(0, opt, global_model, optimizer, True)  # 训练
+    local_test(opt.num_processes, opt, global_model)  # 测试
 
     '''
     processes = []
