@@ -13,7 +13,7 @@ def local_train(index, opt, global_model, optimizer, save=False):
     if save:
         start_time = timeit.default_timer()
     writer = SummaryWriter(opt.log_path)
-    env, num_states, num_actions = create_train_env(opt.world, opt.stage, opt.action_type)#单独玩
+    env, num_states, num_actions = create_train_env(opt.world, opt.stage, opt.action_type)  # 单独玩
     local_model = ActorCritic(num_states, num_actions)
     if opt.use_gpu:
         local_model.cuda()
@@ -24,7 +24,8 @@ def local_train(index, opt, global_model, optimizer, save=False):
     done = True
     curr_step = 0
     curr_episode = 0
-    while True:
+    # while True:
+    for _ in range(4000):
         if save:
             if curr_episode % opt.save_interval == 0 and curr_episode > 0:
                 torch.save(global_model.state_dict(),
