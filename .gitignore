@@ -16,6 +16,6 @@
 
 /trained_models/*
 !/trained_models/a3c_super_mario_bros_4_1
-
+!/trained_models/a3c_super_mario_bros_1_1
 
 /.idea/

@@ -25,7 +25,7 @@ def local_train(index, opt, global_model, optimizer, save=False):
     curr_step = 0
     curr_episode = 0
     # while True:
-    for _ in range(4000):
+    for _ in range(10000):
         if save:
             if curr_episode % opt.save_interval == 0 and curr_episode > 0:
                 torch.save(global_model.state_dict(),

@@ -7,6 +7,8 @@ conda新建虚拟环境，安装库 `pip install -r requirements.txt`
 
 版本要和 requirements.txt 中一致（pytorch 1.11.0，gym 0.21.0）
 
+可能需要下载ffmpeg等包，哪里报错下哪里
+
 ```python
 python train.py  # 训练模型
 python test.py  # 测试模型 
@@ -14,7 +16,7 @@ python test.py  # 测试模型
 
 output文件夹保存了测试视频
 
-训练成功示例
+训练成功示例，训练设置跑10000episode，可以增加，获得更好的模型
 ```
 Process 0. Episode 0
 Process 0. Episode 1
