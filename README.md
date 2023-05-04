@@ -1,7 +1,7 @@
 ## 创建环境
 conda新建虚拟环境，安装库 `pip install -r requirements.txt`
 
-版本要和 requirements.txt 中一致
+版本要和 requirements.txt 中一致（pytorch 1.11.0，gym 0.21.0）
 
 ```python
 python train.py  # 训练模型
@@ -23,3 +23,4 @@ Process 0. Episode 7
 Process 0. Episode 8
 ```
 
+测试成功会出现马里奥闯关的视频
