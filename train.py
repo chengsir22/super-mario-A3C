@@ -42,9 +42,9 @@ def train(opt):
     os.makedirs(opt.log_path)
     if not os.path.isdir(opt.saved_path):  
         os.makedirs(opt.saved_path)
-    mp = _mp.get_context("forkserver")  # linux返回一个上下文对象，用于启动新的子进程，window平台使用spawn
+    mp = _mp.get_context("spawn")  # linux使用forkserver返回一个上下文对象，用于启动新的子进程，window平台使用spawn
     env, num_states, num_actions = create_train_env(opt.world, opt.stage, opt.action_type)  # 游戏环境配置
-    global_model = ActorCritic(num_states, num_actions) # AC模型
+    global_model = ActorCritic(num_states, num_actions)  # AC模型
     if opt.use_gpu:
         global_model.cuda()
     global_model.share_memory()
@@ -63,8 +63,8 @@ def train(opt):
     
     local_train(0, opt, global_model, optimizer, True)
     local_test(opt.num_processes, opt, global_model)
-    
 
+    '''
     processes = []
     for index in range(opt.num_processes):
         if index == 0:
@@ -78,7 +78,7 @@ def train(opt):
     processes.append(process)
     for process in processes:
         process.join()
-
+    '''
 
 if __name__ == "__main__":
     opt = get_args()
