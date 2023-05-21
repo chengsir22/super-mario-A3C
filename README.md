@@ -8,6 +8,7 @@ conda新建虚拟环境，安装库 `pip install -r requirements.txt`
 版本要和 requirements.txt 中一致（pytorch 1.11.0，gym 0.21.0）
 
 可能需要下载ffmpeg等包，哪里报错下哪里
+`conda install ffmpeg`
 
 ```python
 python train.py  # 训练模型
