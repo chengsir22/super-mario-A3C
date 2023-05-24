@@ -31,3 +31,10 @@ Process 0. Episode 8
 ```
 
 测试成功会出现马里奥闯关的视频
+
+新增第二个项目
+
+使用模仿学习训练gym CartPole-v0,在GAIL文件夹中
+```python
+python GAIL.py  # 训练模型，查看结果
+```
